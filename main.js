@@ -7,7 +7,7 @@ camera.position.z = 70;
 
 const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('solarCanvas') });
 renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+
 
 // Light
 const light = new THREE.PointLight(0xffffff, 2, 300);
