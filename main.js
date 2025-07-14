@@ -325,13 +325,22 @@ function hideLoadingScreen() {
 
 // Initialize everything
 function init() {
-  initializeControls();
-  startFPSCounter();
-  animate();
-  
-  // Hide loading screen after a delay
-  setTimeout(hideLoadingScreen, 2000);
+  try {
+    initializeControls();
+    startFPSCounter();
+    animate();
+    
+    // Hide loading screen after a short delay
+    setTimeout(hideLoadingScreen, 1000);
+  } catch (error) {
+    console.error('Failed to initialize solar system:', error);
+    hideLoadingScreen();
+  }
 }
 
-// Start the application
-init();
+// Start the application when DOM is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
