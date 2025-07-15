@@ -23,7 +23,8 @@ const ambientLight = new THREE.AmbientLight(0x404040, 0.1);
 scene.add(ambientLight);
 
 // Controls
-const controls = new THREE.OrbitControls(camera, renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
+
 controls.enableDamping = true;
 controls.dampingFactor = 0.05;
 controls.minDistance = 20;

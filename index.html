@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3D Solar System Simulation</title>
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
@@ -72,8 +73,13 @@
 
   <canvas id="solarCanvas"></canvas>
 
+  <!-- Load THREE.js core -->
   <script src="https://unpkg.com/three@0.148.0/build/three.min.js"></script>
-  <script src="https://unpkg.com/three@0.148.0/examples/js/controls/OrbitControls.js"></script>
+
+  <!-- Load OrbitControls from a version that attaches globally -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.124.0/examples/js/controls/OrbitControls.js"></script>
+
+  <!-- Load your simulation -->
   <script src="main.js"></script>
 </body>
 </html>
